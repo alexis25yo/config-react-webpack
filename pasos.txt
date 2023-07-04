@@ -1,0 +1,24 @@
+npm init -y
+
+npm install webpack webpack-cli @babel/core @babel/cli @babel/preset-env @babel/polyfill babel-loader html-webpack-plugin webpack-dev-server css-loader style-loader mini-css-extract-plugin html-loader file-loader sass sass-loader
+
+npm i @babel/preset-react
+
+dentro de rules:
+{
+            test: /\.(jpe?g|png|gif|svg)$/i,
+            type: "asset/resource",
+            generator: {
+              filename: "assets/[name][ext]",
+            },
+          },
+
+en babelrc
+{
+    "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+    ]
+}
+
+npm i  react react-dom
